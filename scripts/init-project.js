@@ -32,7 +32,7 @@ inquirer.prompt(questions).then((answers) => {
 
 	executeCommand(`
         cd ${path.join(__dirname, '..', 'packages', 'client')} && 
-        npx @vue/cli create . --no-git --skipGetStarted --bare
+        npm create vue@latest . --no-git --skipGetStarted --bare
     `);
 	executeCommand(`
         cd ${path.join(__dirname, '..', 'packages', 'server')} && 
