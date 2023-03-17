@@ -3,19 +3,26 @@ A MEVN stack template using Lerna and Docker compose
 
 ## Structure
 
-This project contains three parts the `server`, the `client` and the `database` you will find them in the `packages` folder.
+This project contains three parts the ***server***, the ***client*** and the ***database*** you will find them in the `packages` folder.
 
 ### Database
-The `database` will be run using the `mongo` docker image from dockerhub.
-All you need to do is run: 
-`docker run -p 27017:27017 --name ${PROJECT_NAME}-db-container -v ${PATH_TO_FOLDER}/packages/db/data:/data/db -d mongo`
+The ***database*** will be run using the `mongo` docker image from dockerhub.
+All you need to do is run:
+```bash
+docker run -p 27017:27017 --name ${PROJECT_NAME}-db-container -v ${PATH_TO_FOLDER}/packages/db/data:/data/db -d mongo
+```
 Replace the `${PROJECT_NAME}` with your project name and the `${PATH_TO_FOLDER}` with the path from root to this folder.
 
 ### Server
-The `server` uses my `Express-template` which already has validation, authentication and a structure to start with. I find using the controller, service, repository layers in express is better when scaling to a larger application.
+The ***server*** uses my `Express-template` which already has validation, authentication and a structure to start with. I find using the controller, service, repository layers in express is better when scaling to a larger application.<br/>
+This repository can be found at https://github.com/thebetar/Express-template
 
 ### Client
-The `client` uses `Vue.js` this folder is left empty in the project and will be created by using `vue create .` I made the decision to do it like this because then I will not have to maintain the version in the repository and since the `@vue/cli` tool works great this is not necessary.
+The ***client*** uses `Vue.js` this folder is left empty in the project and will be created by using 
+```bash 
+vue create .
+``` 
+I made the decision to do it like this because then I will not have to maintain the version in the repository and since the `@vue/cli` tool works great this is not necessary.
 
 ## Building the app
 
