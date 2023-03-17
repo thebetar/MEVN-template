@@ -7,6 +7,7 @@
 		"init-project": "node ./scripts/init-project.js"
 	},
 	"type": "module",
+	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/thebetar/MEVN-template.git"

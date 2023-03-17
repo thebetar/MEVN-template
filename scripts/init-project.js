@@ -32,11 +32,11 @@ inquirer.prompt(questions).then((answers) => {
 
 	executeCommand(`
         cd ${path.join(__dirname, '..', 'packages', 'client')} && 
-        npx @vue/cli create .
+        npx @vue/cli create . --no-git --skipGetStarted --bare
     `);
 	executeCommand(`
         cd ${path.join(__dirname, '..', 'packages', 'server')} && 
-        git clone https://github.com/thebetar/express-template && 
+        git clone https://github.com/thebetar/express-template . && 
         rm -rf .git
     `);
 	// executeCommand(`
