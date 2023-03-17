@@ -5,7 +5,10 @@ A MEVN stack template using Lerna and Docker compose
 
 This project contains three parts the `server`, the `client` and the `database` you will find them in the `packages` folder.
 
-The `database` will be run using the `mongo` docker image from dockerhub. All you need to do is run `docker run -p 27017:27017 --name ${PROJECT_NAME}-db-container -v ${PATH_TO_FOLDER}/packages/db/data:/data/db -d mongo`. Replace the `${PROJECT_NAME}` with your project name and the `${PATH_TO_FOLDER}` with the path from root to this folder.
+The `database` will be run using the `mongo` docker image from dockerhub.
+All you need to do is run: 
+`docker run -p 27017:27017 --name ${PROJECT_NAME}-db-container -v ${PATH_TO_FOLDER}/packages/db/data:/data/db -d mongo`
+Replace the `${PROJECT_NAME}` with your project name and the `${PATH_TO_FOLDER}` with the path from root to this folder.
 
 The `server` uses my `Express-template` which already has validation, authentication and a structure to start with. I find using the controller, service, repository layers in express is better when scaling to a larger application.
 
