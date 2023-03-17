@@ -39,9 +39,9 @@ inquirer.prompt(questions).then((answers) => {
         git clone https://github.com/thebetar/express-template . && 
         rm -rf .git
     `);
-	// executeCommand(`
-	//     docker run --name ${projectName}-db-container -v ${path.join(__dirname, '..', 'packages', 'db', 'data')} -p 27017:27017 -d mongo
-	// `);
+	executeCommand(`
+	    docker run --name ${projectName}-db-container -v ${path.join(__dirname, '..', 'packages', 'db', 'data')} -p 27017:27017 -d mongo
+	`);
 	executeCommand(`
 		npm install
 	`);

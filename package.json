@@ -4,7 +4,8 @@
 	"description": "A MEVN stack template using Lerna and Docker compose",
 	"main": "index.js",
 	"scripts": {
-		"init-project": "node ./scripts/init-project.js"
+		"init-project": "node ./scripts/init-project.js",
+		"clear-project": "cp scripts/templates/docker-compose.yml docker-compose.yml && cd packages && rm -rf client server && mkdir client server"
 	},
 	"type": "module",
 	"private": true,
