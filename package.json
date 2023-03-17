@@ -1,22 +1,29 @@
 {
-  "name": "mevn-template",
-  "version": "1.0.0",
-  "description": "A MEVN stack template using Lerna and Docker compose",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thebetar/MEVN-template.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thebetar/MEVN-template/issues"
-  },
-  "homepage": "https://github.com/thebetar/MEVN-template#readme",
-  "dependencies": {
-    "inquirer": "^9.1.4"
-  }
+	"name": "mevn-template",
+	"version": "1.0.0",
+	"description": "A MEVN stack template using Lerna and Docker compose",
+	"main": "index.js",
+	"scripts": {
+		"init-project": "node ./scripts/init-project.js"
+	},
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thebetar/MEVN-template.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/thebetar/MEVN-template/issues"
+	},
+	"homepage": "https://github.com/thebetar/MEVN-template#readme",
+	"dependencies": {
+		"inquirer": "^9.1.4"
+	},
+	"workspaces": [
+		"packages/*"
+	],
+	"devDependencies": {
+		"lerna": "^6.5.1"
+	}
 }
